@@ -1,0 +1,62 @@
+[
+    {
+      "input": { "prompt": "Slow ambient pad that feels like drifting through space." },
+      "output": {
+        "code": "use_bpm 40\nlive_loop :space_pad do\n  with_fx :reverb, mix: 0.8, room: 1 do\n    use_synth :prophet\n    play :c3, attack: 4, release: 8, cutoff: 70, amp: 0.4\n  end\n  sleep 8\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Upbeat house groove at 124 BPM with tight kick and hi‑hat." },
+      "output": {
+        "code": "use_bpm 124\nlive_loop :kick do\n  sample :bd_tek, amp: 2\n  sleep 1\nend\nlive_loop :hats do\n  sample :drum_cymbal_closed, amp: 0.8\n  sleep 0.5\nend\nlive_loop :bass do\n  use_synth :fm\n  play :e2, release: 0.25, amp: 0.9\n  sleep 1\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Epic fantasy vibe: orchestral strings with timpani hits, 90 BPM." },
+      "output": {
+        "code": "use_bpm 90\nlive_loop :strings do\n  with_fx :reverb, mix: 0.7 do\n    use_synth :blade\n    play_chord [:c4, :g4, :e5], attack: 1, release: 6, amp: 0.6\n  end\n  sleep 6\nend\nlive_loop :timpani do\n  sample :drum_bass_hard, amp: 1.5\n  sleep 6\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Jazzy swing loop with walking bass at 100 BPM." },
+      "output": {
+        "code": "use_bpm 100\nuse_synth :fm\nlive_loop :walking_bass do\n  notes = [:c2,:e2,:g2,:a2,:bb2,:a2,:g2,:e2]\n  notes.each do |n|\n    play n, release: 0.2, amp: 1\n    sleep 0.75\n  end\nend\nlive_loop :ride_cymbal do\n  sample :drum_cymbal_soft, amp: 0.7\n  sleep 0.5\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Lo‑fi chillhop at 88 BPM with vinyl crackle." },
+      "output": {
+        "code": "use_bpm 88\nsample :vinyl_hiss, amp: 0.3, attack: 0, sustain: 16, release: 0\nlive_loop :drums do\n  sample :bd_haus, amp: 1.2\n  sleep 1\n  sample :sn_generic, amp: 0.8\n  sleep 1\nend\nlive_loop :chords do\n  use_synth :fm\n  play_chord [:d4,:f4,:c5], sustain: 2, release: 1, amp: 0.6\n  sleep 4\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Dark warehouse techno, 132 BPM, distorted kick and acid line." },
+      "output": {
+        "code": "use_bpm 132\nlive_loop :kick do\n  with_fx :distortion, distort: 0.7 do\n    sample :bd_zum, amp: 3\n  end\n  sleep 1\nend\nlive_loop :acid do\n  use_synth :tb303\n  play_pattern_timed scale(:e3,:minor_pentatonic), 0.25,\n    release: 0.2, cutoff: rrand(70,120), res: 0.9, amp: 0.9\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Reggae groove at 75 BPM, off‑beat skank guitar and deep bass." },
+      "output": {
+        "code": "use_bpm 75\nlive_loop :skank do\n  with_fx :reverb, mix: 0.4 do\n    synth :pluck, note: :c4, sustain: 0.1, release: 0.2, amp: 1\n  end\n  sleep 0.5\nend\nlive_loop :bass do\n  use_synth :fm\n  play_pattern_timed [:c2,:g2,:bb2,:g2], [1,1,1,1], release: 0.4, amp: 1.2\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Experimental minimal: random blips over a 60 BPM pulse." },
+      "output": {
+        "code": "use_bpm 60\nlive_loop :pulse do\n  sample :bd_fat, amp: 1.5\n  sleep 1\nend\nlive_loop :blips do\n  use_synth :beep\n  play scale(:c4,:chromatic).choose, release: 0.1, amp: 0.5\n  sleep [0.25,0.5,0.75].choose\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Tension soundtrack with low drones & metallic hits, 55 BPM." },
+      "output": {
+        "code": "use_bpm 55\nlive_loop :drone do\n  use_synth :dark_ambience\n  play :c2, attack: 4, release: 8, cutoff: 60, amp: 0.8\n  sleep 8\nend\nlive_loop :metal_hits do\n  sync :drone\n  sample :elec_ping, rate: 0.2, amp: 1.5\n  sleep 3\nend"
+      }
+    },
+    {
+      "input": { "prompt": "Cheerful 8‑bit chiptune melody at 140 BPM." },
+      "output": {
+        "code": "use_bpm 140\nuse_synth :chipbass\nlive_loop :melody do\n  play_pattern_timed [:c5,:e5,:g5,:b5,:c6,:b5,:g5,:e5], 0.25,\n    release: 0.15, amp: 0.8\nend\nlive_loop :bass do\n  sync :melody\n  play_pattern_timed [:c3,:c3,:g2,:g2], 0.5, release: 0.2, amp: 1\nend"
+      }
+    }
+  ]

@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --te-black: #141414;
+  --te-dark-gray: #1C1C1C;
+  --te-border: #333333;
+  --te-gray: #808080;
+  --te-light-gray: #4A4A4A;
+  --te-white: #E0E0E0;
+  --te-orange: #FF5C00;
+  --te-red: #FF3333;
+}
+
+@layer base {
+  html {
+    font-family: "SF Mono", ui-monospace, "Courier New", monospace;
+    -webkit-font-smoothing: none;
+    font-smooth: never;
+    background-color: var(--te-black);
+    color: var(--te-white);
+  }
+  
+  body {
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .te-input {
+    @apply w-full bg-transparent border-none text-white text-sm resize-none focus:outline-none placeholder:text-[#4A4A4A];
+  }
+  
+  .te-button {
+    @apply border border-[#333333] px-6 py-2 text-sm hover:bg-[#FF5C00] hover:border-[#FF5C00] transition-colors disabled:opacity-50 disabled:hover:bg-transparent disabled:hover:border-[#333333] tracking-widest;
+  }
+  
+  .te-section {
+    @apply border border-[#333333] bg-[#1C1C1C] p-6;
+  }
+  
+  .te-label {
+    @apply text-sm text-[#808080] mb-3 tracking-widest;
+  }
+}
+
+.border-2 {
+  border-width: 2px !important;
+} 
