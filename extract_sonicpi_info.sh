@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# Get the user's home directory
+HOME_DIR="$HOME"
+
 # Hardcoded directory containing the spider log
-LOG_DIR="/Users/carlosesteban/.sonic-pi/log"
+LOG_DIR="$HOME_DIR/.sonic-pi/log"
 LOG_FILE="spider.log"
 
 # Change to the log directory

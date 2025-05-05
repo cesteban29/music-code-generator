@@ -44,11 +44,11 @@ This AI assistant will take a user prompt and generate Sonic Pi (ruby) code that
 Run braintrust push with options for different package managers
   - using pnpm:
     ```
-    pnpm dlx braintrust push {file}
+    pnpm dlx braintrust push lib/scorers.ts
     ```
   - using npm:
     ```
-    npx braintrust push {file}
+    npx braintrust push lib/scorers.ts
     ```
 
 ## Run the Demo
@@ -56,8 +56,10 @@ Run braintrust push with options for different package managers
     ```
     pnpm dev
     ```
+2. view logs in Braintrust
+3. provide human feedback in the app and it will appear in the Braintrust trace
 
-### Demo Script
+### Example Demo Script
 
 [00:01] Hi, everyone—my name is Carlos.
 
