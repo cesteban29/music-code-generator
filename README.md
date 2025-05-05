@@ -44,12 +44,15 @@ This AI assistant will take a user prompt and generate Sonic Pi (ruby) code that
 Run braintrust push with options for different package managers
   - using pnpm:
     ```
-    pnpm dlx braintrust push lib/scorers.ts
+    pnpm dlx braintrust push {file}
     ```
   - using npm:
     ```
-    npx braintrust push lib/scorers.ts
+    npx braintrust push {file}
     ```
+Run the script above for:
+  - lib/musical-judge-scorer.ts
+  - lib/prompts.ts
 ### 4. Upload the JSON dataset
 In the Braintrust UI, navigate to your Library > Dataset view and add the synthetic.json file
 
