@@ -39,7 +39,7 @@ This AI assistant will take a user prompt and generate Sonic Pi (ruby) code that
     BRAINTRUST_API_KEY=
     ```
 
-### 3. Push Dataset, Prompts, and Scorers stored in lib folder
+### 3. Push Scorers stored in lib folder
 
 Run braintrust push with options for different package managers
   - using pnpm:
@@ -50,6 +50,8 @@ Run braintrust push with options for different package managers
     ```
     npx braintrust push lib/scorers.ts
     ```
+### 4. Upload the JSON dataset
+In the Braintrust UI, navigate to your Library > Dataset view and add the synthetic.json file
 
 ## Run the Demo
 1. run the demo using pnpm dev
